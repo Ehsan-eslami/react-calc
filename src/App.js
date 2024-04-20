@@ -1,3 +1,4 @@
+import Button from './components/Button';
 import { useState } from 'react';
 import './App.css';
 
@@ -45,22 +46,23 @@ function App() {
         </div>
 
         <section className="grid grid-cols-4 gap-3">
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={handleDelete}>clear</button>
-          <button className="col-start-1 py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(7)}>7</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(8)}>8</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(9)}>9</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick("÷")}>÷</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(4)}>4</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(5)}>5</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(6)}>6</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick("x")}>x</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(1)}>1</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(2)}>2</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(3)}>3</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick("-")}>-</button>
-          <button className="col-span-2 py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick(0)}>0</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleResult()}>=</button>
-          <button className="py-1 px-4 bg-slate-200 rounded-lg shadow-[0_2px_15px_-5px_rgba(0,0,0,0.5)] hover:shadow-lg  active:shadow-none duration-200" onClick={() => handleClick("+")}>+</button>
+          <Button title='7' func={() => handleClick(7)}/>
+          <Button title='8' func={() => handleClick(8)}/>
+          <Button title='9' func={() => handleClick(9)}/>
+          <Button title="AC" func={handleDelete} />
+          <Button title='4' func={() => handleClick(4)}/>
+          <Button title='5' func={() => handleClick(5)}/>
+          <Button title='6' func={() => handleClick(6)}/>
+          <Button title='÷' func={() => handleClick("÷")}/>
+          <Button title='1' func={() => handleClick(1)}/>
+          <Button title='2' func={() => handleClick(2)}/>
+          <Button title='3' func={() => handleClick(3)}/>
+          <Button title="x" func={() => handleClick("x")}/>
+          <Button title="-" func={() => handleClick("-")}/>
+          <Button title="0" func={() => handleClick(0)} />
+          <Button title="+" func={() => handleClick("+")}/>
+          <Button title='=' func={() => handleResult()}/>
+
         </section>
       </section>
     </div>

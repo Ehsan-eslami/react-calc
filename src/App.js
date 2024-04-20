@@ -46,22 +46,22 @@ function App() {
         </div>
 
         <section className="grid grid-cols-4 gap-3">
+          <Button title="AC" func={handleDelete} />
           <Button title='7' func={() => handleClick(7)}/>
           <Button title='8' func={() => handleClick(8)}/>
           <Button title='9' func={() => handleClick(9)}/>
-          <Button title="AC" func={handleDelete} />
+          <Button title='÷' func={() => handleClick("÷")}/>
           <Button title='4' func={() => handleClick(4)}/>
           <Button title='5' func={() => handleClick(5)}/>
           <Button title='6' func={() => handleClick(6)}/>
-          <Button title='÷' func={() => handleClick("÷")}/>
+          <Button title="x" func={() => handleClick("x")}/>
           <Button title='1' func={() => handleClick(1)}/>
           <Button title='2' func={() => handleClick(2)}/>
           <Button title='3' func={() => handleClick(3)}/>
-          <Button title="x" func={() => handleClick("x")}/>
           <Button title="-" func={() => handleClick("-")}/>
           <Button title="0" func={() => handleClick(0)} />
-          <Button title="+" func={() => handleClick("+")}/>
           <Button title='=' func={() => handleResult()}/>
+          <Button title="+" func={() => handleClick("+")}/>
 
         </section>
       </section>
